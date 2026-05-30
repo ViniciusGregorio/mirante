@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W1Q20CCPQX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W1Q20CCPQX');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mirante Canaã | Sabor nas Alturas</title>
@@ -100,7 +109,7 @@
     -->
 
     <div class="download-menu-container">
-      <a href="cardapio-mirante-canaa.pdf" download="Cardapio-Mirante-Canaa.pdf" class="btn-outline-gold">
+      <a href="cardapio-mirante-canaa.pdf" download="Cardapio-Mirante-Canaa.pdf" class="btn-outline-gold" onclick="gtag('event', 'download_cardapio')">
         📄 Baixar Cardápio completo em PDF
       </a>
     </div>
@@ -167,11 +176,11 @@
       <input type="time" required>
       <input type="number" placeholder="Quantidade de pessoas" required>
       <textarea placeholder="Alguma observação? (Aniversário, alergias, etc.)" rows="4"></textarea>
-      <button type="submit" class="btn-whatsapp">Confirmar Reserva via WhatsApp</button>
+      <button type="submit" class="btn-whatsapp" onclick="gtag('event', 'reserva_whatsapp')">Confirmar Reserva via WhatsApp</button>
     </form>
 
     <div class="footer-social">
-      <a href="https://instagram.com/mirantecanaa" target="_blank">Siga nosso Instagram</a>
+      <a href="https://instagram.com/mirantecanaa" target="_blank" onclick="gtag('event', 'clique_instagram')">Siga nosso Instagram</a>
     </div>
   </section>
 
@@ -179,6 +188,7 @@
   href="https://wa.me/5521980297671?text=Olá! Vim pelo site do Mirante Canaã e gostaria de tirar uma dúvida." 
   class="floating-whatsapp"
   target="_blank"
+  onclick="gtag('event', 'clique_whatsapp')"
 >
   <span>💬</span>
   <span>Fale conosco</span>
